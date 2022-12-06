@@ -7,11 +7,11 @@ function Nav() {
 	return (
 		<nav>
 			<div className='nav-wrapper'>
-				<div className='flex-cs space-x-5'>
+				<div className='flex-between space-x-5'>
 					<Link href={'/'}>
 						<Logo />
 					</Link>
-					<ul className='flex-cs space-x-5 max-md:hidden'>
+					<ul className='flex-between space-x-5 max-md:hidden'>
 						<Link href={'menu'}>
 							<li>Menu</li>
 						</Link>
@@ -24,10 +24,10 @@ function Nav() {
 					</ul>
 				</div>
 
-				<div className='flex-cs space-x-5 max-md:hidden'>
+				<div className='flex-between space-x-5 max-md:hidden'>
 					<Link
 						href={'/store-locator'}
-						className='flex-cs hover-green space-x-1.5'
+						className='flex-between hover-green space-x-1.5'
 					>
 						<Geo />
 						<p>Find a store</p>
@@ -43,7 +43,7 @@ function Nav() {
 						</button>
 					</Link>
 				</div>
-				<div className='flex-cs rounded-full p-2 transition-colors hover:bg-neutral-100 md:hidden'>
+				<div className='flex-between rounded-full p-2 transition-colors hover:bg-neutral-100 md:hidden'>
 					<Menu />
 				</div>
 			</div>

@@ -1,9 +1,21 @@
 import MainCard from '../components/main.card'
 import Head from './head'
-import { banners } from '../banners'
 import Link from 'next/link'
+import { sanityClient } from '../lib/client'
+import { Banners } from '../models/banners'
 
-export default function Home() {
+async function getBanners() {
+	const res = await sanityClient.fetch(`*[_type == 'banners']`)
+
+	return res.sort(
+		(a: { sort: string }, b: { sort: string }) =>
+			parseFloat(a.sort) - parseFloat(b.sort)
+	)
+}
+
+export default async function Home() {
+	const banners: Banners[] = await getBanners()
+
 	return (
 		<section>
 			<Head>
@@ -11,10 +23,10 @@ export default function Home() {
 			</Head>
 			<div className='order mx-auto mb-16 flex max-w-[1440px] flex-col'>
 				{banners.map(banner => (
-					<MainCard data={banner} />
+					<MainCard key={banner._id} banner={banner} />
 				))}
 			</div>
-			<div className='wrapper w-2/3 text-center lg:w-1/2'>
+			<div className='wrapper mb-[70px] w-2/3 text-center lg:w-1/2'>
 				<p>
 					*NO PURCHASE NECESSARY. Participating stores only. Starbucks partners
 					(employees) are not eligible to win prizes. Ends 1/1/23. To play and
@@ -23,9 +35,8 @@ export default function Home() {
 						className='underline hover:no-underline'
 						href={'https://www.starbucksforlife.com/'}
 					>
-						https://www.starbucksforlife.com/
-					</Link>{' '}
-					.
+						https://www.starbucksforlife.com/.
+					</Link>
 				</p>
 			</div>
 		</section>

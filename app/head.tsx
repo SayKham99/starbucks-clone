@@ -1,8 +1,4 @@
-import React from 'react'
-
-interface Props {
-	children: React.ReactNode
-}
+import Props from '../models/props'
 
 export default function Head({ children }: Props) {
 	return (
