@@ -1,4 +1,4 @@
-import Props from '../models/props'
+import { Props } from '../models/interface'
 
 export default function Head({ children }: Props) {
 	return (

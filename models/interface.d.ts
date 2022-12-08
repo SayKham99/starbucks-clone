@@ -1,3 +1,5 @@
+import React from 'react'
+
 export interface Banners {
 	_id: string
 	btn_text: string
@@ -15,4 +17,16 @@ export interface Image {
 
 export interface Asset {
 	url: string
+}
+
+export interface Category {
+	id: string
+	category: string
+	name: string
+	slug: string
+	image: Image
+}
+
+export interface Props {
+	children: React.ReactNode
 }

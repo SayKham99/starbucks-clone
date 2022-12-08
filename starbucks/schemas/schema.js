@@ -7,6 +7,10 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import banners from './banners'
 import footerLinks from './footerLinks'
 import blockContent from './blockContent'
+import main_category from './main_category'
+import category from './category'
+import product from './product'
+import middle_category from './middle_category'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -19,7 +23,11 @@ export default createSchema({
 		// in the studio.
 		banners,
 		footerLinks,
-		blockContent
+		blockContent,
+		main_category,
+		category,
+		product,
+		middle_category
 		// When added to this list, object types can be used as
 		// { type: 'typename' } in other document schemas
 	])

@@ -1,7 +1,9 @@
 import Image from 'next/legacy/image'
 import Link from 'next/link'
-import { Banners } from '../models/banners'
+
 import { urlFor } from '../lib/client'
+
+import { Banners } from '../models/interface'
 
 interface Props {
 	banner: Banners
