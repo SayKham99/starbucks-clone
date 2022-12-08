@@ -3,12 +3,12 @@ import Link from 'next/link'
 import MainCard from '../components/main.card'
 import Head from './head'
 
-import { Interface } from '../models/interface'
+import { Banners } from '../models/interface'
 
 import { getBanners } from '../utils/fetchs'
 
 export default async function Home() {
-	const banners: Interface[] = await getBanners()
+	const banners: Banners[] = await getBanners()
 
 	return (
 		<>
