@@ -33,7 +33,7 @@ export default async function Page() {
 						<Link
 							className='category-item'
 							key={drink.id}
-							href={`drinks/${drink.slug}`}
+							href={`menu/${drink.mc_slug}/${drink.slug}`}
 						>
 							<div className='flex-between gap-4'>
 								<div className='image-wrapper'>
@@ -51,7 +51,7 @@ export default async function Page() {
 						<Link
 							className='category-item'
 							key={food.id}
-							href={`foods/${food.slug}`}
+							href={`menu/${food.mc_slug}/${food.slug}`}
 						>
 							<div className='flex-between gap-4'>
 								<div className='image-wrapper'>
@@ -69,7 +69,7 @@ export default async function Page() {
 						<Link
 							className='category-item'
 							key={home.id}
-							href={`homes/${home.slug}`}
+							href={`menu/${home.mc_slug}/${home.slug}`}
 						>
 							<div className='flex-between gap-4'>
 								<div className='image-wrapper'>
@@ -87,7 +87,7 @@ export default async function Page() {
 						<Link
 							className='category-item'
 							key={merch.id}
-							href={`merchs/${merch.slug}`}
+							href={`menu/${merch.mc_slug}/${merch.slug}`}
 						>
 							<div className='flex-between gap-4'>
 								<div className='image-wrapper'>
@@ -105,7 +105,7 @@ export default async function Page() {
 						<Link
 							className='category-item'
 							key={gift.id}
-							href={`gifts/${gift.slug}`}
+							href={`menu/${gift.mc_slug}/${gift.slug}`}
 						>
 							<div className='flex-between gap-4'>
 								<div className='image-wrapper'>

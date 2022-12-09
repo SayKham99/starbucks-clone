@@ -25,6 +25,7 @@ export interface Category {
 	name: string
 	slug: string
 	image: Image
+	mc_slug: string
 }
 
 export interface Props {

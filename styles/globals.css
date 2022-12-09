@@ -107,4 +107,20 @@
     .image-wrapper {
         @apply h-full min-w-[112px] overflow-hidden rounded-full
     }
+
+    .product-view-image {
+        @apply h-full max-md:w-[100px] w-[148px] overflow-hidden rounded-full
+    }
+
+    .product-item {
+        @apply sm:w-1/2 md:w-1/3 lg:w-1/4
+    }
+
+    .product-item-wrapper {
+        @apply flex-start w-full flex-wrap border-t-2 py-12 sm:gap-y-3 md:gap-y-5 lg:gap-y-8
+    }
+
+    .product-item-inner {
+        @apply flex flex-col items-center space-y-4 text-center
+    }
 }
