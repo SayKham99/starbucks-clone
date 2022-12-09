@@ -10,19 +10,23 @@ interface Props {
 }
 
 export default async function Page({ params }: Props) {
-	const products: Category[] = await getProductsByCategory(
-		params.slug.toString()
-	)
+	const products: Category[] = await getProductsByCategory(params.slug)
+
+	console.log(products)
 
 	return (
 		<>
 			<Head>
-				<title>At Home Coffee: Starbucks Coffee Company-Clone</title>
+				<title>{`${products[0].category}: Starbucks Coffee Company-Clone`}</title>
 			</Head>
 			<aside className='w-full'>
-				<h1 className='text-[28px] font-bold'>Menu</h1>
+				<h1 className='flex font-bold capitalize text-neutral-400'>
+					<Link href={'/menu'}>Menu/ </Link>
+					<p className='text-neutral-500'>{products[0].category}</p>
+				</h1>
 
-				<h2 className='category-item-header'>Drinks</h2>
+				<h2 className='category-item-header'>{products[0].category}</h2>
+				<hr />
 				<div className='product-item-wrapper'>
 					{products.map(product => (
 						<Link

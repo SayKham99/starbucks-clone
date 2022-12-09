@@ -62,7 +62,7 @@ export default async function MenuLayout({ children }: Props) {
 					))}
 				</ol>
 			</div>
-			<div>{children}</div>
+			<div className='w-full'>{children}</div>
 		</div>
 	)
 }

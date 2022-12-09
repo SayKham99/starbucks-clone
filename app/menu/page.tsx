@@ -25,9 +25,12 @@ export default async function Page() {
 				<title>Menu: Starbucks Coffee Company-Clone</title>
 			</Head>
 			<aside className='w-full'>
-				<h1 className='text-[28px] font-bold'>Menu</h1>
+				<h1 className='flex items-end font-bold capitalize text-neutral-400'>
+					<p>menu</p>
+				</h1>
 
 				<h2 className='category-item-header'>Drinks</h2>
+				<hr />
 				<div className='category-item-wrapper'>
 					{drinks.map(drink => (
 						<Link
@@ -46,6 +49,7 @@ export default async function Page() {
 				</div>
 
 				<h2 className='category-item-header'>Food</h2>
+				<hr />
 				<div className='category-item-wrapper'>
 					{foods.map(food => (
 						<Link
@@ -64,6 +68,7 @@ export default async function Page() {
 				</div>
 
 				<h2 className='category-item-header'>At Home Coffee</h2>
+				<hr />
 				<div className='category-item-wrapper'>
 					{homes.map(home => (
 						<Link
@@ -82,6 +87,7 @@ export default async function Page() {
 				</div>
 
 				<h2 className='category-item-header'>Merchandise</h2>
+				<hr />
 				<div className='category-item-wrapper'>
 					{merchs.map(merch => (
 						<Link
@@ -100,6 +106,7 @@ export default async function Page() {
 				</div>
 
 				<h2 className='category-item-header'>Gift Cards</h2>
+				<hr />
 				<div className='category-item-wrapper'>
 					{gifts.map(gift => (
 						<Link

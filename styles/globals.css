@@ -35,7 +35,7 @@
     }
 
     hr {
-        @apply h-[3px] w-full border-0 bg-gray-200 rounded
+        @apply h-[2px] w-full border-0 bg-gray-200 rounded
     }
 }
 
@@ -97,11 +97,11 @@
     }
 
     .category-item-wrapper {
-        @apply flex-start w-full flex-wrap gap-6 border-t-2 border-neutral-900 py-6 max-md:flex-col max-sm:py-3
+        @apply flex-start w-full flex-wrap gap-y-8 py-6 max-md:flex-col max-sm:py-3
     }
 
     .category-item {
-        @apply flex-start w-2/5 max-md:w-full
+        @apply flex-start w-3/6 max-md:w-full
     }
 
     .image-wrapper {
@@ -117,7 +117,7 @@
     }
 
     .product-item-wrapper {
-        @apply flex-start w-full flex-wrap border-t-2 py-12 sm:gap-y-3 md:gap-y-5 lg:gap-y-8
+        @apply flex-start w-full flex-wrap py-12 sm:gap-y-3 md:gap-y-5 lg:gap-y-8
     }
 
     .product-item-inner {
