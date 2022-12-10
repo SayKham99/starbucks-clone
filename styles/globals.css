@@ -93,7 +93,7 @@
     }
 
     .category-item-header {
-        @apply my-8 text-[28px] font-bold max-sm:my-4
+        @apply mb-8 mt-4 text-[28px] font-bold max-sm:my-4
     }
 
     .category-item-wrapper {
