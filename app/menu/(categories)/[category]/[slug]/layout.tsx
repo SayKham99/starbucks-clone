@@ -1,6 +1,6 @@
 import { Props } from '../../../../../models/interface'
 
-export default function SlugLayout({ children }: Props) {
+export default function CategoryLayout({ children }: Props) {
 	return (
 		<>
 			<div>

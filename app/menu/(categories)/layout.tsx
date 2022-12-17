@@ -1,6 +1,6 @@
-import '../../styles/globals.css'
+import '../../../styles/globals.css'
 
-import { Category, Props } from '../../models/interface'
+import { Category, Props } from '../../../models/interface'
 
 import {
 	getDrinks,
@@ -8,7 +8,7 @@ import {
 	getGift,
 	getHome,
 	getMerchandise
-} from '../../utils/fetchs'
+} from '../../../utils/fetchs'
 import Link from 'next/link'
 
 export default async function MenuLayout({ children }: Props) {

@@ -27,6 +27,11 @@ export interface Category {
 	image: Image
 	mc_slug: string
 	mc_category: string
+	ingredients: {
+		calories: number
+		fat: number
+		sugar: number
+	}
 }
 
 export interface Props {

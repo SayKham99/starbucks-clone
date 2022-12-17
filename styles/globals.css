@@ -5,7 +5,7 @@
 @layer base {
     html,
     body {
-        @apply m-0 min-w-[375px] bg-white p-0 font-roboto outline-none;
+        @apply m-0 min-w-[320px] bg-white p-0 font-roboto outline-none;
     }
 
     nav {
@@ -94,6 +94,10 @@
 
     .category-item-header {
         @apply mb-8 mt-4 text-[28px] font-bold max-sm:my-4
+    }
+
+    .middle-category-header {
+        @apply mb-8 mt-4 text-[24px] font-bold max-sm:my-4
     }
 
     .category-item-wrapper {

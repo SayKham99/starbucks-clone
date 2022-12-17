@@ -37,6 +37,14 @@ export default {
 			}
 		},
 		{
+			name: 'main_image',
+			title: 'Main Image',
+			type: 'image',
+			options: {
+				hotspot: true
+			}
+		},
+		{
 			name: 'category',
 			title: 'Category',
 			type: 'reference',

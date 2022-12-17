@@ -37,9 +37,12 @@ async function getGift() {
 async function getProductsByCategory(category: string) {
 	return await sanityClient.fetch(
 		`*[_type == 'product' && category->slug.current == "${category}" ]{"id":_id,"image":image{asset->{url}},"mc_category": middle_category->name,"mc_slug":middle_category->slug.current,"category":category->name,description,ingredients,name,"slug":slug.current,_createdAt} | order(_createdAt asc)`
-		/*
-                `*[_type == 'product' && category->slug.current == "${category}" ]{"mc_category": middle_category->name} | order(mc_category desc)`
-        */
+	)
+}
+
+async function getProductsById(name: string) {
+	return await sanityClient.fetch(
+		`*[_type == 'product' && slug.current == '${name}']{"id":_id,"image":main_image{asset->{url}},description,ingredients,name}`
 	)
 }
 
@@ -50,5 +53,6 @@ export {
 	getHome,
 	getMerchandise,
 	getGift,
-	getProductsByCategory
+	getProductsByCategory,
+	getProductsById
 }

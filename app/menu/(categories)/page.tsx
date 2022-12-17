@@ -1,8 +1,8 @@
 import Link from 'next/link'
 
-import Head from '../head'
+import Head from '../../head'
 
-import { Category } from '../../models/interface'
+import { Category } from '../../../models/interface'
 
 import {
 	getDrinks,
@@ -10,7 +10,7 @@ import {
 	getGift,
 	getHome,
 	getMerchandise
-} from '../../utils/fetchs'
+} from '../../../utils/fetchs'
 
 export default async function Page() {
 	const foods: Category[] = await getFoods()

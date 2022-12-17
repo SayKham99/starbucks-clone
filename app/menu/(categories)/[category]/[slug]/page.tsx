@@ -30,16 +30,24 @@ export default async function Page({ params }: Props) {
 					<p className='text-neutral-500'>{products[0].category}</p>
 				</h1>
 
-				<h2 className='category-item-header'>{products[0].category}</h2>
+				<h2 className={`category-item-header`}>{products[0].category}</h2>
 				{data.map(category => (
 					<div key={category}>
-						<h2 className='category-item-header'>{category}</h2>
+						<h2
+							className={`middle-category-header ${
+								data[0] == undefined ? 'hidden' : ''
+							} `}
+						>
+							{category}
+						</h2>
 						<hr />
 						<div className='product-item-wrapper'>
 							{products.map(product => {
 								return category == product.mc_category ? (
 									<div key={product.id} className='product-item'>
-										<Link href={`${product.mc_slug}/${product.slug}`}>
+										<Link
+											href={`/menu/${product.mc_slug}/product/${product.slug}`}
+										>
 											<div className='product-item-inner'>
 												<div className='product-view-image'>
 													<img
