@@ -42,7 +42,7 @@ async function getProductsByCategory(category: string) {
 
 async function getProductsById(name: string) {
 	return await sanityClient.fetch(
-		`*[_type == 'product' && slug.current == '${name}']{"id":_id,"image":main_image{asset->{url}},description,ingredients,name}`
+		`*[_type == 'product' && slug.current == '${name}']{"id":_id,"image":main_image{asset->{url}},description,ingredients,name,description}`
 	)
 }
 

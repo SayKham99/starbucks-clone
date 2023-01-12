@@ -17,7 +17,7 @@ function Footer() {
 					<ol className='footer-item'>
 						<li className='footer-item-header'>About Us</li>
 						{aboutLinks.map(link => (
-							<Link key={link.id} href={link.link}>
+							<Link key={link.id} href={'/'}>
 								<li>{link.title}</li>
 							</Link>
 						))}
@@ -25,7 +25,7 @@ function Footer() {
 					<ol className='footer-item'>
 						<li className='footer-item-header'>Careers</li>
 						{careerLinks.map(link => (
-							<Link key={link.id} href={link.link}>
+							<Link key={link.id} href={'/'}>
 								<li>{link.title}</li>
 							</Link>
 						))}
@@ -33,7 +33,7 @@ function Footer() {
 					<ol className='footer-item'>
 						<li className='footer-item-header'>Social Impact</li>
 						{socialImapactLinks.map(link => (
-							<Link key={link.id} href={link.link}>
+							<Link key={link.id} href={'/'}>
 								<li>{link.title}</li>
 							</Link>
 						))}
@@ -41,7 +41,7 @@ function Footer() {
 					<ol className='footer-item'>
 						<li className='footer-item-header'>For Business Partners</li>
 						{bussinessLinks.map(link => (
-							<Link key={link.id} href={link.link}>
+							<Link key={link.id} href={'/'}>
 								<li>{link.title}</li>
 							</Link>
 						))}
@@ -49,7 +49,7 @@ function Footer() {
 					<ol className='footer-item'>
 						<li className='footer-item-header'>Order and Pickup</li>
 						{orderLinks.map(link => (
-							<Link key={link.id} href={link.link}>
+							<Link key={link.id} href={'/'}>
 								<li>{link.title}</li>
 							</Link>
 						))}
@@ -66,7 +66,7 @@ function Footer() {
 					</div>
 					<div className='flex flex-wrap gap-x-4'>
 						{documentLinks.map(social => (
-							<Link key={social.id} href={social.link}>
+							<Link key={social.id} href={'/'}>
 								{social.title}
 							</Link>
 						))}

@@ -21,6 +21,7 @@ export interface Asset {
 
 export interface Category {
 	id: string
+	description: string
 	category: string
 	name: string
 	slug: string
